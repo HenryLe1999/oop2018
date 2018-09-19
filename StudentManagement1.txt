@@ -1,0 +1,35 @@
+package week1;
+
+public class StudentManagement {
+    int max = 100;
+    private Student[] students = new Student[max];
+
+    public boolean sameGroup(Student s1, Student s2) {
+        // TODO:
+        return  s1.getGroup().equals(s2.getGroup());
+    }
+
+    void studentsByGroup() {
+        // TODO:
+       
+    }
+
+    void removeStudent(String id) {
+        // TODO:
+    }
+
+    public static void main(String[] args) {
+        // TODO:
+        Student me1 = new Student();
+        me1.setGroup("INT22042");
+        Student me2 = new Student("Nhan","17020943","Levannhan16101999@gmail.com");
+        Student me3 = new Student(me2);
+        StudentManagement st = new StudentManagement();
+        me1.getInfo();
+        me2.getInfo();
+        me3.getInfo();
+        System.out.println(st.sameGroup(me1,me2));
+        System.out.println(st.sameGroup(me2,me3));
+
+        }
+    

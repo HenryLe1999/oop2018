@@ -1,0 +1,87 @@
+package week1;
+
+import javax.xml.bind.SchemaOutputResolver;
+
+public class Student {
+	private String name;
+	private String id;
+	private String group;
+	private String email; 
+	
+
+
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	public String getName()
+	{
+		return this.name;
+	}
+	
+
+
+	public void setID(String id)
+	{
+		this.id = id;
+	}
+	public String getID()
+	{
+		return this.id;
+	}
+	
+	public void setGroup(String group)
+	{
+		this.group = "INT22041";
+	}
+	public String getGroup()
+	{
+		return this.group;
+	}
+	
+	public void setEmail(String email)
+	{
+		this.email = email;
+	}
+	public String getEmail()
+	{
+		return this.email;
+	}
+	
+	public void getInfo()
+	{
+		System.out.println("name = " + this.name);
+		System.out.println("id 	 = " + this.id);
+		System.out.println("group = " + this.group);
+		System.out.println("email = " + this.email);
+	}
+	
+	
+	
+	// Cau 7 
+	public void Student()
+	{
+		this.name = "Student";
+		this.id = "000";
+		this.group = "INT22041";
+		this.email = "uet@vnu.edu.vn";
+	}
+	
+	public void Student(String n, String sid, String em)
+	{
+		this.group = "INT22041";
+		
+		this.name = n;
+		this.id = sid;
+		this.email = em;
+	}
+	
+	public void Student(Student s)
+	{
+		this.name = s.name;
+        this.id = s.id;
+        this.group = s.group;
+        this.email = s.email;
+	}
+}
+
