@@ -168,7 +168,7 @@
             String t = d1.gioitinh;
             String t1 = d2.gioitinh;
             return t.equals(t1);
-        }
+        }  
 
 
 
