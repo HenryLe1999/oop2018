@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Created by CCNE on 26/09/2018.
  */
 public class Task1 {
-    public static int gcd(int a, int b) {
+     public static int gcd(int a, int b) {
         while(a!=b)
         {
             if(a>b) a=a-b;
@@ -26,15 +26,8 @@ public class Task1 {
         return c;
     }
     public static void main(String[] args) {
-        int a, b;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("nhap A: ");
-        a= sc.nextInt();
-        System.out.println("nhap B:");
-        b= sc.nextInt();
-
-
+        int a=10,b=20;
         System.out.println("uoc trung lon nhat la: "+ gcd(a,b) );
-        System.out.println(fibonacci(a));
+        System.out.println("So Fibonacci thu " + a  + fibonacci(a));
     }
 }
