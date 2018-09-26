@@ -100,7 +100,7 @@ public class Fraction {
             System.out.println("hai phan so bang nhau");
         } else {
             System.out.println("hap phan so khac nhau");
-        }
+        } 
 
     }
 
