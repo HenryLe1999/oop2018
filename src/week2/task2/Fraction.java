@@ -2,9 +2,6 @@
 
 public class Fraction {
 
-    // TODO: khai báo các thu?c tính
-    private int tu, mau;
-
     public Fraction(int numerator, int denominator) {
         // TODO: kh?i t?o giá tr? cho các thu?c tính numberator (t? s?), denominator (m?u s?)
         this.tu = numerator;
@@ -15,7 +12,7 @@ public class Fraction {
         return tu;
     }
 
-    public int setTu(int tu) {
+    public void setTu(int tu) {
         this.tu = tu;
     }
 
@@ -23,7 +20,7 @@ public class Fraction {
         return mau;
     }
 
-    public int setMau(int mau) {
+    public void setMau(int mau) {
         this.mau = mau;
     }
 
@@ -81,11 +78,30 @@ public class Fraction {
         return thuong;
     }
 
-    public boolean equals(Object obj) {
+    public boolean equals(Fraction obj) {
         int ts = this.getTu() * obj.getMau();
         int ms = this.getMau() * obj.getTu();
         if (ts == ms) return true;
 
         return false;
     }
+    public String toString() {
+        return tu + "/" + mau;
+    }
+
+    public static void main(String[] args){
+        Fraction a= new Fraction(2,3);
+        Fraction b= new Fraction(5,6);
+        System.out.println("tong hai phan so la :" + a.add(b).toString());
+        System.out.println("hieu hai phan so la : " + a.subtract(b).toString());
+        System.out.println("tich hai phan so la : " + a.multiply(b).toString());
+        System.out.println("thuong hai phan so la : " + a.divide(b).toString());
+        if (a.equals(b)) {
+            System.out.println("hai phan so bang nhau");
+        } else {
+            System.out.println("hap phan so khac nhau");
+        }
+
+    }
+
 }
