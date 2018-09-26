@@ -14,8 +14,8 @@ public class Task1 {
         return a;
     }
 
-    public static int fibonacci(int n) {
-        // TODO: Tìm số fibonacci ở vị trí n
+        // TODO: Tìm số fib    public static int fibonacci(int n) {
+onacci ở vị trí n
         int a=0,b=1,c = 0;
         for(int i=1;i<n;i++)
         {
