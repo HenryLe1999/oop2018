@@ -1,107 +1,102 @@
-﻿package week1;
+package week2.task2;
 
 public class Fraction {
 
+    // TODO: khai báo các thuộc tính
+    private int numerator, denominator;
     public Fraction(int numerator, int denominator) {
-        // TODO: kh?i t?o giá tr? cho các thu?c tính numberator (t? s?), denominator (m?u s?)
-        this.tu = numerator;
-        this.mau = denominator;
+
+        this.numerator = numerator;
+        this.denominator = denominator;
     }
 
-    public int getTu() {
-        return tu;
-    }
 
-    public void setTu(int tu) {
-        this.tu = tu;
-    }
-
-    public int getMau() {
-        return mau;
-    }
-
-    public void setMau(int mau) {
-        this.mau = mau;
-    }
-
-    public int timUSCLN(int a, int b) {
-        while (a != b) {
-            if (a > b) {
-                a -= b;
-            } else {
-                b -= a;
-            }
+    public static void rutgon(Fraction n) {
+        int a = n.numerator;
+        int b = n.denominator;
+        int tmp;
+        while(b!=0){
+            tmp = a%b;
+            a = b;
+            b = tmp;
         }
-        return a;
+        n.denominator /= a;
+        n.numerator /= a;
+        if(n.numerator > 0 && n.denominator < 0){
+            n.numerator *= -1;
+            n.denominator *= -1;
+        }
+
     }
 
-    public void toiGianPhanSo() {
-        int i = timUSCLN(this.getTu(), this.getMau());
-        this.setTu(this.getTu() / i);
-        this.setMau(this.getMau() / i);
+    public String phanso(){
+        if(this.numerator % this.denominator !=0)
+            return this.numerator + "/" + this.denominator;
+        else return "" + this.numerator/this.denominator;
     }
-
     public Fraction add(Fraction other) {
-        // TODO: Phuong th?c c?ng hai phân s? (this và other), tr? v? d?i tu?ng Fraction m?i
-        int ts = this.getTu() * other.getMau() + other.getTu() * this.getMau();
-        int ms = this.getMau() * other.getMau();
-        Fraction tong = new Fraction(ts, ms);
-        tong.toiGianPhanSo();
-        return tong;
+        // TODO: Phương thức cộng hai phân số (this và other), trả về đối tượng Fraction mới
+        Fraction sum = new Fraction(1,1);
+        sum.numerator = this.numerator*other.denominator + other.numerator*this.denominator;
+        sum.denominator = this.denominator*other.denominator;
+        rutgon(sum);
+        return sum;
     }
 
     public Fraction subtract(Fraction other) {
-        // TODO: Phuong th?c tr? hai phân s? (this và other), tr? v? d?i tu?ng Fraction m?i
-        int ts = this.getTu() * other.getMau() - other.getTu() * this.getMau();
-        int ms = this.getMau() * other.getMau();
-        Fraction hieu = new Fraction(ts, ms);
-        hieu.toiGianPhanSo();
-        return hieu;
+        // TODO: Phương thức trừ hai phân số (this và other), trả về đối tượng Fraction mới
+        Fraction sub = new Fraction(1,1);
+        sub.numerator = this.numerator*other.denominator - other.numerator*this.denominator;
+        sub.denominator = this.denominator*other.denominator;
+        rutgon(sub);
+        return sub;
     }
 
     public Fraction multiply(Fraction other) {
-        // TODO: Phuong th?c nhân hai phân s? (this và other), tr? v? d?i tu?ng Fraction m?i
-        int ts = this.getTu() * other.getTu();
-        int ms = this.getMau() * other.getMau();
-        Fraction tich = new Fraction(ts, ms);
-        tich.toiGianPhanSo();
-        return tich;
+        // TODO: Phương thức nhân hai phân số (this và other), trả về đối tượng Fraction mới
+        Fraction result = new Fraction(1,1);
+        result.numerator = this.numerator*other.numerator;
+        result.denominator = this.denominator*other.denominator;
+        rutgon(result);
+        return result;
     }
 
     public Fraction divide(Fraction other) {
-        // TODO: Phuong th?c chia hai phân s? (this và other), tr? v? d?i tu?ng Fraction m?i
-        int ts = this.getTu() * other.getMau();
-        int ms = this.getMau() * other.getTu();
-        Fraction thuong = new Fraction(ts, ms);
-        thuong.toiGianPhanSo();
-
-        return thuong;
+        // TODO: Phương thức chia hai phân số (this và other), trả về đối tượng Fraction mới
+        Fraction result = new Fraction(1,1);
+        result.numerator = this.numerator*other.denominator;
+        result.denominator = this.denominator*other.numerator;
+        rutgon(result);
+        return result;
     }
 
-    public boolean equals(Fraction obj) {
-        int ts = this.getTu() * obj.getMau();
-        int ms = this.getMau() * obj.getTu();
-        if (ts == ms) return true;
 
-        return false;
-    }
-    public String toString() {
-        return tu + "/" + mau;
-    }
 
-    public static void main(String[] args){
-        Fraction a= new Fraction(2,3);
-        Fraction b= new Fraction(5,6);
-        System.out.println("tong hai phan so la :" + a.add(b).toString());
-        System.out.println("hieu hai phan so la : " + a.subtract(b).toString());
-        System.out.println("tich hai phan so la : " + a.multiply(b).toString());
-        System.out.println("thuong hai phan so la : " + a.divide(b).toString());
-        if (a.equals(b)) {
-            System.out.println("hai phan so bang nhau");
-        } else {
-            System.out.println("hap phan so khac nhau");
-        } 
 
+    public boolean equals(Fraction other){
+        //so sanh 2 phan so
+        Fraction n = new Fraction(this.numerator, this.denominator);
+        rutgon(n);
+        rutgon(other);
+        if(n.numerator == other.numerator && n.denominator == other.denominator)
+            return true;
+        else return false;
     }
 
+    public static void main(String[] args) {
+        Fraction a = new Fraction(2,-6);
+        Fraction b = new Fraction(-1,2);
+        Fraction result = new Fraction(1,1);
+        rutgon(a);
+        System.out.println(a.phanso());
+        result = a.add(b);
+        System.out.println("ket qua phep cong: " + result.phanso());
+        result = b.subtract(a);
+        System.out.println("ket qua phep tru: " + result.phanso());
+        result = b.multiply(a);
+        System.out.println("ket qua phep nhan: "+ result.phanso());
+        result = b.divide(a);
+        System.out.println("ket qua phep chia; "+ result.phanso());
+        System.out.println("hai phan so bang  nhau: " + a.equals(b));
+    }
 }
