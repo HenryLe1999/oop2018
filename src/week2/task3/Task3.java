@@ -1,175 +1,102 @@
-﻿// package week2.task3;
+package week2.task3;
 
-    public class Task3 {
-
-
-    }
-
-    //TODO: khai báo 3 class
-    class hocsinh{
-        // 3 thuoc tinh cua doi tuong
-        private int tuoi;
-        private String name;
-        private String lop;
-        // cac phuong thuc setter,getter
-        public void setTuoi(int n)
-        {
-            tuoi=n;
-        }
-        public void setName(String n)
-        {
-            name = n;
-        }
-        public void setLop(String n)
-        {
-            lop=n;
-        }
-        public int getTuoi()
-        {
-            return tuoi;
-        }
+public class Task3 {
+    class Student{
+        String name;
+        int age;
+        String email;
         public String getName()
         {
-            return name;
+            return this.name;
         }
-        public String getLop()
-        {
-            return lop;
-        }
-        //1.phuong thuc in ra ten,tuoi va mon day cua giao vien
-        void getInfo()
-        {
-            System.out.println("Ten giao vien la :"+ name + "tuoi: "+ tuoi+"Mon day: "+lop );
-        }
-        //2.phuong thuc so sanh xem 2 giao vien co day cung mot mon hoc khong
-        public boolean sameSubjects(hocsinh t1,hocsinh t2)
-        {
-            String s1= t1.getLop();
-            String s2 = t2.getLop();
-            return t1.equals(t2);
-        }
-        //3.phuong thuc kiem tra xem giao vien do bao gio nghi huu
-        public int ngh(hocsinh t)
-        {
-            int a=0;
-            if(t.getTuoi()>50)
-                return -1;
-            else if(t.getTuoi()<50){
-                a=50-t.getTuoi();
-                return a;
-            }
-            return 0;
-
-        }
-
-    }
-//doi tuong 2 la nhan vien cua 1 cong ty
-
-    class doctor
-    {
-        private int age;
-        private String name;
-        private String field;
-        private int seniority;
-        public void setAge(int n)
-        {
-            age=n;
-        }
-        public void setName(String n)
-        {
-            name = n;
-        }
-        public void setField(String n)
-        {
-            field=n;
-        }
-        public void setSeniority(int n)
-        {
-            seniority = n;
+        public void setName(String name) {
+            this.name=name;
         }
         public int getAge()
         {
-            return age;
+            return this.age;
         }
-        public String getName()
-        {
-            return name;
+
+        public void setAge(int age) {
+            this.age = age;
         }
-        public String getField()
+        public String getEmail()
         {
-            return field;
+            return this.email;
         }
-        public int getSeniority()
-        {
-            return seniority;
+
+        public void setEmail(String email) {
+            this.email = email;
         }
-        //1.phuong thuc in ra ten,tuoi,chuyen nganh,tham nien cua bac si
-        void getInfo()
+        // TODO hoc sinh
+        public void Name()
         {
-            System.out.println("Nhan vien :"+ name + "tuoi: "+ age+"chuyen nganh: "+field+"tham nien" + seniority );
+            System.out.println("ten toi la"+ this.name);
         }
-        //    2.phuong thuc kiem tra xem cac bac si co cung chuen nganh khong
-        public boolean sameField( doctor d1 ,doctor d2)
+        // TODO hoc sinh dang code
+        public void Study()
         {
-            String t1=d1.field;
-            String t2 =d2.field;
-            return t1.equals(t2);
+            System.out.println("I am coding");
         }
-        //    3.phuong thuc in ra so tien bac si kiem ra trong 1 thang
-        public void money(doctor d)
+        // TODO mon tin hoc
+        public void Subject()
         {
-            if(d.getSeniority()<=5)
-                System.out.println("So tien nhan vien kiem duoc trong 1 thang la 10 trieu");
-            else if(d.getSeniority()>5&&d.getSeniority()<=10)
-                System.out.println("So tien nhan vien kiem duoc trong 1 thang la 15 trieu");
-            else
-                System.out.println("So tien nhan vien kiem duoc trong 1 thang la 20 trieu");
+            System.out.println("tin hoc");
         }
     }
-    //doi tuong 3 la con cho
-    class dog{
-        private int tuoi;
-        private String mauda;
-        private String gioitinh;
-        public void settuoi(int n)
+    // TODO doi tuong Student
+}
+    class friend{
+        String name;
+        int age;
+        String email;
+        public String getName()
         {
-            tuoi=n;
+            return this.name;
         }
-        public void setMauda(String n)
+        public void setName(String name) {
+            this.name=name;
+        }
+        public int getAge()
         {
-            mauda = n;
+            return this.age;
         }
-        public void setGioitinh(String n){gioitinh=n;
-        }
-        public int gettuoi()
-        {
-            return tuoi;
-        }
-        public String getMauda()
-        {
-            return mauda;
-        }
-        public String getGioitinh()
-        {
-            return gioitinh;
-        }
-        void thongtin()
-        {
-            System.out.println("Mau da cho "+ mauda + ","+tuoi + "tuoi,la giong"+gioitinh);
-        }
-        dog(int age, String mauda ,String gioitinh)
-        {
-            tuoi = age;
-            this.mauda = mauda;
-            this.gioitinh = gioitinh;
-        }
-        public boolean ktgt(dog d1,dog d2)
-        {
-            String t = d1.gioitinh;
-            String t1 = d2.gioitinh;
-            return t.equals(t1);
-        }  
 
+        public void setAge(int age) {
+            this.age = age;
+        }
+        public String getEmail()
+        {
+            return this.email;
+        }
+        public void School() { System.out.println("UET"); }
+        public void Class() {   System.out.println("K62IE4");}
+        public void Email() { System.out.println("maxseo9x@gmail.com") ;}
+    }
+    class mylove {
+        String name;
+        int age;
+        String job;
+        public String getName()
+        {
+            return this.name;
+        }
+        public void setName(String name) {
+            this.name=name;
+        }
+        public int getAge()
+        {
+            return this.age;
+        }
 
-
+        public void setAge(int age) {
+            this.age = age;
+        }
+        public String getJob()
+        {
+            return this.job;
+        }
+        public void School() { System.out.println("THPT NG"); }
+        public void Class() {   System.out.println("12DK50");}
+        public void Job() { System.out.println("Student") ;}
     }
