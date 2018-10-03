@@ -21,10 +21,10 @@ public class Week3Test {
         assertEquals(-12,Week3.minOfArray(b));
         int[] c={100, 200, 3, 400, 50};
         assertEquals(3,Week3.minOfArray(c));
-        int d={10, 20, 30, 6, 40, 50};
+        int[] d={10, 20, 30, 6, 40, 50};
         assertEquals(6,Week3.minOfArray(d));
-        int e={-9,-10,30,555,9};
-        assertEquals(-9,Week3.minOfArray(e));
+        int[] e={-9,-10,30,555,9};
+        assertEquals(-10,Week3.minOfArray(e));
     }
     @Test
     // TODO: Viết 5 testcase cho phương thức calculateBMI()
