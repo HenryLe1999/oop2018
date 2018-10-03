@@ -12,8 +12,8 @@ public class Week3 {
         // TODO: Tìm giá trị nhỏ nhất của của một mảng số nguyên (kích thước mảng <= 100 phần tử)
         // array = new int[100];
         //int min=1000000;
-        for(int i=0;i<100;i++){
-            for(int j=0;j<99;j++){
+        for(int i=0;i<array.length;i++){
+            for(int j=0;j<array.length-1;j++){
                 if(array[j]>array[j+1]){
                     int tg = array[j];
                     array[j] = array[j+1];
