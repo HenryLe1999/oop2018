@@ -35,14 +35,13 @@ public class Week3 {
         // TODO: Viết chương trình tính chỉ số BMI và in ra kết quả đánh giá
         double cs = weight/(height*height);
         if(cs < 18.5)
-            System.out.println("Thiếu cân");
+           return "Thiếu cân";
         if(cs >= 18.5 && cs<=22.99)
-            System.out.println("Bình thường");
+            return "Bình thường";
         if(cs >=23 && cs<=24.99)
-            System.out.println("Thừa cân");
+            return "Thừa cân";
         if(cs >= 25)
-            System.out.println("Béo phì");
-        return null;
+            return "Béo phì";
     }
 
 }
