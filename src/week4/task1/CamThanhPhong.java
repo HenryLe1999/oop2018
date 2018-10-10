@@ -1,24 +1,24 @@
 package week4.task1;
 
 public class CamThanhPhong extends QuaCam {//cam cao phong ke thua tu QuaCam
-    private double khoiluong;
+    private int khoiluong;
     private String huongvi;
 
-    public CamThanhPhong(double x, String hv){
+    public CamThanhPhong(int x, String hv){
         this.khoiluong = x;
         this.huongvi = hv;
     }
 
-    public CamCaoPhong(){
+    public CamThanhPhong(){
         this.khoiluong = 0;
         this.huongvi = "";
     }
 
-    public double getKhoiluong() {
+    public int getKhoiluong() {
         return khoiluong;
     }
 
-    public void setKhoiluong(double khoiluong) {
+    public void setKhoiluong(int khoiluong) {
         this.khoiluong = khoiluong;
     }
 
@@ -31,14 +31,14 @@ public class CamThanhPhong extends QuaCam {//cam cao phong ke thua tu QuaCam
     }
 
 
-    public void gioiThieucamcaophong(CamCaoPhong s){
+    public void gioiThieucamcaophong(CamThanhPhong s){
         System.out.println("Cam cao phong co vi " + s.getHuongvi());//in ra huong vi cam cao phong
         System.out.println("Cam cao phong khoi luong " + s.getKhoiluong());//in ra khoi luong cam cao phong
     }
 
-    public void inCamcaophong( CamCaoPhong c1, CamCaoPhong c2){//in thong tin cua hoa qua va noi nhap cua no
-        System.out.println(c1.getTenqua()+", Noi nhap:  " + c1.getNoinhap());
-        System.out.println(c2.getTenqua()+", Noi nhap:  " + c2.getNoinhap());
+    public void inCamcaophong( CamThanhPhong c1, CamThanhPhong c2){//in thong tin cua hoa qua va noi nhap cua no
+        System.out.println(c1.getMausac()+", Khoi luong:  " + c1.getKhoiluong());
+        System.out.println(c2.getMausac()+", khoi luong:  " + c2.getKhoiluong());
     }
 
 }
