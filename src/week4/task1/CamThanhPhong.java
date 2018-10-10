@@ -5,6 +5,5 @@ public class CamThanhPhong extends HoaQua{
         khoiluong = 90;
         giaban = 40000;
         mau = "vang";
-        nguongoc = "Thanh Phong";
     }
 }
