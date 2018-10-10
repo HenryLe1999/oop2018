@@ -20,8 +20,8 @@ public class CamSanh extends QuaCam{
         this.soluong = soluong;
     }
 
-    public void gioiThieucamsanh(CamCaoPhong c1){
+    public void gioiThieucamsanh(CamThanhPhong c1){
         //in ra thong tin cua hoa qua bao gom ngay nhap va so luong
-        System.out.println("Ngay nhap" + c1.getNoinhap() + ", So luong nhap: " + getSoluong());
+        System.out.println(" So luong nhap: " + getSoluong());
     }
 }
