@@ -5,6 +5,5 @@ public class CamSanh extends HoaQua{
         khoiluong = 100;
         giaban = 23000;
         mau = "xanh";
-        nguongoc = "Viet Nam";
     }
 }
