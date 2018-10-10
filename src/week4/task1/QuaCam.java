@@ -1,27 +1,40 @@
 package week4.task1;
 
-public class CamSanh extends QuaCam{
-    private double can;
-    private String soluong;
-//khai bao phuong thuc can
-    public double getCan() {
-        return can;
+public class QuaCam extends HoaQua {
+    //ke thua tu HoaQua
+    //khai bao thuoc tinh cua QuaCam
+    private int giaban;
+    private String noiban;
+
+    public QuaCam(){
+        this.giaban = 0;
+        this.noiban = "";
     }
 
-    public void setCan(double can) {
-        this.can = can;
-    }
- //  khai bao phuong thuc so luong
-    public String getSoluong() {
-        return soluong;
+    public QuaCam(String xx, int  y ){
+        super("","");
     }
 
-    public void setSoluong(String soluong) {
-        this.soluong = soluong;
+    public int getGiaban() {
+        return giaban;
     }
 
-    public void gioiThieucamsanh(CamCaoPhong c1){
-        //in ra thong tin cua hoa qua bao gom ngay nhap va so luong
-        System.out.println("Ngay nhap" + c1.getNoinhap() + ", So luong nhap: " + getSoluong());
+    public void setGiaban(int giaban) {
+        this.giaban = giaban;
+    }
+
+    public String getNoiban() {
+        return noiban;
+    }
+
+    public void setNoiban(String noiban) {
+        this.noiban = noiban;
+    }
+    public void kiemTra(QuaCam c1, QuaCam c2){//ham kiem tra xem 2 qua co cung noi ban khong
+        if (soSanhnoi(c1,c2)){
+            System.out.println("Nhap cung noi");
+        }else{
+            System.out.println("Nhap khac noi");
+        }
     }
 }
