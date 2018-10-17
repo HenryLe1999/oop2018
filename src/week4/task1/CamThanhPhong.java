@@ -36,7 +36,7 @@ public class CamThanhPhong extends QuaCam {//cam cao phong ke thua tu QuaCam
         System.out.println("Cam cao phong khoi luong " + s.getKhoiluong());//in ra khoi luong cam cao phong
     }
 
-    public void inCamcaophong( CamThanhPhong c1, CamThanhPhong c2){//in thong tin cua hoa qua va noi nhap cua no
+    public void inCamThanhphong( CamThanhPhong c1, CamThanhPhong c2){//in thong tin cua hoa qua va noi nhap cua no
         System.out.println(c1.getMausac()+", Khoi luong:  " + c1.getKhoiluong());
         System.out.println(c2.getMausac()+", khoi luong:  " + c2.getKhoiluong());
     }
