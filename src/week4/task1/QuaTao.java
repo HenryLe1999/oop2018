@@ -34,9 +34,9 @@ public class QuaTao extends HoaQua {
         //kiem tra xem 2 qua co cung 1 loai hay khong
         //neu cung loai thi in Cung loai
         //neu khong cung loai thi in Khac loai
-        if (t1.getTenqua().equals(t2.getTenqua()))
-            System.out.println("Cung loai");
-        else System.out.println("Khac loai");
+        if (t1.getMausac().equals(t2.getMausac()))
+            System.out.println("Cung mau");
+        else System.out.println("Khac mau");
 
     }
 }
