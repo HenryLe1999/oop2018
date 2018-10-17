@@ -2,7 +2,7 @@ package week4.task1;
 
 public class CamSanh extends QuaCam{
     private double can;
-    private String soluong;
+    private int soluong;
 //khai bao phuong thuc can
     public double getCan() {
         return can;
@@ -12,11 +12,11 @@ public class CamSanh extends QuaCam{
         this.can = can;
     }
  //  khai bao phuong thuc so luong
-    public String getSoluong() {
+    public int getSoluong() {
         return soluong;
     }
 
-    public void setSoluong(String soluong) {
+    public void setSoluong(int soluong) {
         this.soluong = soluong;
     }
 
