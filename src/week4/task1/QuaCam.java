@@ -12,7 +12,8 @@ public class QuaCam extends HoaQua {
     }
 
     public QuaCam(String xx, int  y ){
-        super("","");
+        this.giaban = y;
+        this.noiban = xx;
     }
 
     public int getGiaban() {
@@ -31,7 +32,7 @@ public class QuaCam extends HoaQua {
         this.noiban = noiban;
     }
     public void kiemTra(QuaCam c1, QuaCam c2){//ham kiem tra xem 2 qua co cung noi ban khong
-        if (soSanhnoi(c1,c2)){
+        if (c1.getNoiban() == c2.getNoiban()){
             System.out.println("Nhap cung noi");
         }else{
             System.out.println("Nhap khac noi");
