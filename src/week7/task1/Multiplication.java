@@ -1,11 +1,11 @@
 package week7.task1;
 
-public class Addition extends BinaryExpression {
+public class Multiplication extends BinaryExpression {
 
     private Expression left;
     private Expression right;
 
-    public Addition(Expression firstExpression, Expression secondExpression){
+    public Multiplication(Expression firstExpression, Expression secondExpression){
         left = firstExpression;
         right = secondExpression;
     }
@@ -22,6 +22,6 @@ public class Addition extends BinaryExpression {
 
     @Override
     public int evaluate() {
-        return left.evaluate() + right.evaluate();
+        return left.evaluate() * right.evaluate();
     }
 }
