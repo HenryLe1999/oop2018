@@ -14,8 +14,8 @@ class ExpressionTest {
     public static void main(String[] args) {
 
         Numeral a = new Numeral(10);
-        Numeral b = new Numeral(20);
-        Numeral c = new Numeral(6);
+        Numeral b = new Numeral(1);
+        Numeral c = new Numeral(2);
         Numeral d = new Numeral(3);
 
         Square squareOfTen = new Square(a);

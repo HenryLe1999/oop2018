@@ -7,15 +7,11 @@ public class Square extends Expression {
     public Square(Expression expression){
         this.expression = expression;
     }
-
-    @Override
     public String toString() {
         return null;
     }
-
-    @Override
     public int evaluate() {
-        int expressionValue = this.expression.evaluate();
-        return expressionValue*expressionValue;
+         this.expression.evaluate();
+        return this.expression.evaluate()*this.expression.evaluate();
     }
 }

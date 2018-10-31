@@ -9,18 +9,12 @@ public class Subtraction extends BinaryExpression {
         left = firstExpression;
         right = secondExpression;
     }
-
-    @Override
     public Expression left() {
         return left;
     }
-
-    @Override
     public Expression right() {
         return right;
     }
-
-    @Override
     public int evaluate() {
         return left.evaluate() - right.evaluate();
     }
