@@ -12,7 +12,7 @@ public class main {
         System.out.println("cau c");
         Utils.Themvaocuoi(in2);
         System.out.println("cau d");
-        Utils.findFileByName("C:\\Users\\levan.WIN10_SL\\IdeaProjects\\oop20182112018", "nhan3.txt");
+        Utils.findFileByName("C:\\Users\\levan.WIN10_SL\\IdeaProjects\\oop20182112018", "nhan2.txt");
 
     }
 }
